@@ -12,10 +12,6 @@ The Pi creates it's own hotspot that Adafruit's Feather M0 WiFi sends data to th
 When the pi is being updated causing the Feather M0 to not beable to connect to the Pi, the M0 with enter a reset state.
 It will try to connect every 10-15sec, when it fails it will reset, until it has established a connection.
 
-Things that need work:
-
-    -Editing Grafana to have a default MySQL data source.
-
 Things working:
     -Currently the Admin username and password are "Admin" and "EvolveAdmin".
 
