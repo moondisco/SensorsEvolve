@@ -1,0 +1,10 @@
+datasources:
+    - name: main
+      type: mysql
+      orgId: 1
+      url: 10.42.0.1:3306
+      password: Evolve
+      user: grafana
+      database: grafanadb
+      editable: true
+      isDefault: true

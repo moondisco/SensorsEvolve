@@ -1,0 +1,68 @@
+version: "2.0"
+
+services:
+  php:
+    build: 
+      context: './php/'
+      args:
+       PHP_VERSION: 5.6
+    networks:
+      - backend
+    container_name: php
+  db:
+    build:
+      context: './mysql/'
+    restart: always
+    ports:
+      - "3306:3306"
+    networks:
+      - backend
+    container_name: db
+  phpmyadmin:
+    image: arm64v8/phpmyadmin:latest
+    restart: always
+    ports:
+      - "8080:80"
+    networks:
+      - backend
+      - frontend
+    container_name: phpmyadmin
+  grafana:
+    build:
+      context: './grafana/'
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - frontend
+      - backend
+    volumes:
+      - grafana-storage:/var/lib/grafana
+  wifi-repeater:
+    build: './wifi-repeater/'
+    privileged: true
+    labels:
+      io.balena.features.dbus: '1'
+  mqtt-broker:
+    image: panuwitp/mosquitto-arm
+    ports:
+      - '1883:1883'
+    networks:
+      - frontend
+      - backend
+  nginx:
+    build : nginx
+    depends_on:
+      - grafana
+      - db
+    ports:
+       - '80:80'
+       - '443:443'
+    restart: always
+networks:
+  frontend:
+  backend:
+volumes:
+  grafana-storage:
+    external: true

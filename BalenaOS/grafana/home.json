@@ -1,0 +1,1008 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "displayName": "-50",
+          "mappings": [],
+          "max": 50,
+          "min": -51,
+          "noValue": "-50",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temp1_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Temp 1"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temp2_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Temp 2"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temp3_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Temp 3"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temp4_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Temp 4"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Freezer Temp 1"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Freezer Temp 4"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Freezer Temp 3"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Freezer Temp 2"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 8,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "8.3.6",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "a7ET9Vf7k"
+          },
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  TIME AS \"time\",\n  temp1_db,\n  temp2_db,\n  temp3_db,\n  temp4_db\nFROM feather_m0_sensors\nWHERE\n  $__timeFilter(TIME)\nORDER BY TIME",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp1_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "temp2_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "temp3_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "temp4_db"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "feather_m0_sensors",
+          "timeColumn": "TIME",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "title": "Freezer Temperature  ",
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "displayName": "0",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "noValue": "0",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "humidity"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "humi1_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Humidity 1"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "humi2_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Humidity 2"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "humi3_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Humidity 3"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "humi4_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Humidity 4"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Freezer Humidity 1"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Freezer Humidity 4"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Freezer Humidity 3"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Freezer Humidity 2"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 12,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "8.3.6",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "a7ET9Vf7k"
+          },
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  TIME AS \"time\",\n  humi1_db,\n  humi2_db,\n  humi3_db,\n  humi4_db\nFROM feather_m0_sensors\nWHERE\n  $__timeFilter(TIME)\nORDER BY TIME",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "humi1_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "humi2_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "humi3_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "humi4_db"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "feather_m0_sensors",
+          "timeColumn": "TIME",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "title": "Freezer Humidity ",
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlYlRd"
+          },
+          "mappings": [],
+          "max": 50,
+          "min": -50,
+          "noValue": "-55",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temp1_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Temp 1"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temp2_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Temp 2"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temp3_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Temp 3"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temp4_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Temp 4"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 12,
+        "x": 0,
+        "y": 7
+      },
+      "id": 11,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "8.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "a7ET9Vf7k"
+          },
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  TIME AS \"time\",\n  temp1_db,\n  temp2_db,\n  temp3_db,\n  temp4_db\nFROM feather_m0_sensors\nWHERE\n  $__timeFilter(TIME)\nORDER BY TIME",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp1_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "temp2_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "temp3_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "temp4_db"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "feather_m0_sensors",
+          "timeColumn": "TIME",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "title": "Freezer Temperature  ",
+      "type": "bargauge"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "displayName": "0",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "noValue": "0",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "humidity"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "humi1_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Humidity 1"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "humi2_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Humidity 2"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "humi3_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Humidity 3"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "humi4_db"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Freezer Humidity 4"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 12,
+        "x": 12,
+        "y": 7
+      },
+      "id": 9,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "8.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "a7ET9Vf7k"
+          },
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  TIME AS \"time\",\n  humi1_db,\n  humi2_db,\n  humi3_db,\n  humi4_db\nFROM feather_m0_sensors\nWHERE\n  $__timeFilter(TIME)\nORDER BY TIME",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "humi1_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "humi2_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "humi3_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "humi4_db"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "feather_m0_sensors",
+          "timeColumn": "TIME",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "title": "Freezer Humidity ",
+      "type": "bargauge"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "tempRoom_db"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "celsius"
+              },
+              {
+                "id": "min",
+                "value": -50
+              },
+              {
+                "id": "max",
+                "value": 50
+              },
+              {
+                "id": "displayName",
+                "value": "-50"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "mode": "continuous-BlYlRd"
+                }
+              },
+              {
+                "id": "displayName",
+                "value": "Main Room Temperature"
+              },
+              {
+                "id": "noValue",
+                "value": "-55"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "humiRoom_db"
+            },
+            "properties": [
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "unit",
+                "value": "humidity"
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "displayName",
+                "value": "Main Room Humidity"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "mode": "continuous-GrYlRd"
+                }
+              },
+              {
+                "id": "noValue",
+                "value": "0"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 24,
+        "x": 0,
+        "y": 11
+      },
+      "id": 10,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "8.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "a7ET9Vf7k"
+          },
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  TIME AS \"time\",\n  tempRoom_db,\n  humiRoom_db\nFROM feather_m0_sensors\nWHERE\n  $__timeFilter(TIME)\nORDER BY TIME",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "tempRoom_db"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "humiRoom_db"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "feather_m0_sensors",
+          "timeColumn": "TIME",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "title": "Main Room",
+      "type": "bargauge"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 35,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Main Dash",
+  "uid": "pxPMRmzgz",
+  "version": 14,
+  "weekStart": ""
+}
