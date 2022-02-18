@@ -32,5 +32,4 @@ Setup for MySQL in Grafana is as follows:
     Min Time interval: 10s
     
     
- The Current Code for the Feather M0 is using AM2315 Sensors with a TCA9518A Multiplexer and sending data to the the Raspberry Pi via WiFi. 
- From the Raspberry Pi's Hotspot. You will need to hard wire the Pi to a router to us it with BalenaCloud.
+ The Feather M0 is using AM2315 Sensors with a TCA9518A.
