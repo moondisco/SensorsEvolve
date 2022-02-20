@@ -1,5 +1,6 @@
 # EvolveSensors
 Sensors with an Adafruit M0, Raspberry Pi 4, Docker, BalenaOS, Grafana, NGINX, PHPMyAdmin, WiFi HotSpot, and Apache
+The Feather M0 is using AM2315 Sensors with a TCA9518A.
 
 This code is written for a AdaFruit M0 WiFi Microcontroller and a Raspberry Pi 4/400/Zero WH/Zero WH 2.
 
@@ -31,5 +32,3 @@ Setup for MySQL in Grafana is as follows:
 
     Min Time interval: 10s
     
-    
- The Feather M0 is using AM2315 Sensors with a TCA9518A.
