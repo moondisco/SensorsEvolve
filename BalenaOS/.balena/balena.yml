@@ -1,3 +1,8 @@
+name: SensorsEvolve
+description: >-
+	This project uses a Raspberry Pi 4 with BalenaOS, Docker, Grafana, NGINX, PHPMyAdmin, WiFi HotSpot, and Apache. 
+	The Pi collects MySQL packets data via wifi, sent from an Adafruit Feather M0+ WiFi. 
+joinable: false
 build-variables:
     services:
         db:
@@ -8,5 +13,6 @@ build-variables:
         phpmyadmin:
             - PMA_USER=admin
             - PMA_PASSWORD=EvolveAdmin
+	
 	    
 
