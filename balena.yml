@@ -12,7 +12,6 @@ post-provisioning: >-
   The OS for the Raspberry Pi is BalenaOS. Download this config, then push it to balenacloud to use this with MySQL, PHP, NGINX, Apache, and Grafana.
   
 type: sw.application
-fleetcta: Evolving Sensors
 assets:
   repository:
     type: blob.asset
