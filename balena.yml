@@ -2,7 +2,6 @@ name: SensorsEvolve
 description: >-
   This project uses a Raspberry Pi 4 with BalenaOS, Docker, Grafana, NGINX, PHPMyAdmin, WiFi HotSpot, and Apache. 
   The Pi collects MySQL packets data via wifi, sent from an Adafruit Feather M0+ WiFi.
-joinable: false
 post-provisioning: >-
   ## How it Works
   
@@ -10,7 +9,6 @@ post-provisioning: >-
   The Feather M0 is using AM2315 Sensors with a TCA9518A.
   This code is written for a AdaFruit M0 WiFi Microcontroller and a Raspberry Pi 4/400/Zero WH/Zero WH 2.
   The OS for the Raspberry Pi is BalenaOS. Download this config, then push it to balenacloud to use this with MySQL, PHP, NGINX, Apache, and Grafana.
-  
 type: sw.application
 assets:
   repository:
