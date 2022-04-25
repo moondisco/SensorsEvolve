@@ -23,6 +23,9 @@ assets:
       url: >-
         'https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-Logo.png'
 data:
+  defaultDeviceType: raspberrypi4-64
+  supportedDeviceTypes:
+    - raspberrypi4-64
   applicationEnvironmentVariables:
     - AP_PASSWORD: EvolveSensors
     - AP_SSID: RPiHotSpot
