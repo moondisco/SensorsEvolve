@@ -2,8 +2,7 @@ name: SensorsEvolve
 type: sw.application
 description: >-
 	This project uses a Raspberry Pi 4 with BalenaOS, Docker, Grafana, NGINX, PHPMyAdmin, WiFi HotSpot, and Apache. 
-	The Pi collects MySQL packets data via wifi, sent from an Adafruit Feather M0+ WiFi. 
-fleetcta: SensorsEvolve
+	The Pi collects MySQL packets data via wifi, sent from an Adafruit Feather M0+ WiFi.
 assets:
   repository:
     type: blob.asset
