@@ -1,5 +1,7 @@
 [![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/moondisco/SensorsEvolve>)
 
+[![balena deploy button](https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-Logo.png)]
+
 # EvolveSensors
 Sensors with an Adafruit M0, Raspberry Pi 4, Docker, BalenaOS, Grafana, NGINX, PHPMyAdmin, WiFi HotSpot, and Apache
 The Feather M0 is using AM2315 Sensors with a TCA9518A.
