@@ -1,6 +1,6 @@
 [![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/moondisco/SensorsEvolve>)
 
-[balena deploy button](https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-Logo.png)
+[(https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-Logo.png)]
 
 # EvolveSensors
 Sensors with an Adafruit M0, Raspberry Pi 4, Docker, BalenaOS, Grafana, NGINX, PHPMyAdmin, WiFi HotSpot, and Apache
