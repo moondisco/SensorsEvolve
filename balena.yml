@@ -12,7 +12,12 @@ assets:
     type: blob.asset
     data:
       url: >-
-        https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-Logo.png
+        https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-Logo.png	
+data:
+  defaultDeviceType: raspberry-pi
+  supportedDeviceTypes:
+    - raspberrypi4-64
+version: 1.0.0
 build-variables:
     services:
         db:
