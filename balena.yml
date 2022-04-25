@@ -38,5 +38,10 @@ data:
     - BALENA_HOST_CONFIG_display_rotate: 0
     - RESIN_HOST_CONFIG_arm_64bit: 1
     - RESIN_HOST_CONFIG_avoid_warnings: 1
-  defaultDeviceType: raspberry-pi
+  defaultDeviceType: raspberrypi4-64
+  supportedDeviceTypes:
+    - raspberry-pi
+    - raspberry-pi2
+    - raspberrypi3
+    - raspberrypi4-64
 version: 1.0.0
