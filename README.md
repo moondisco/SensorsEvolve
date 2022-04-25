@@ -1,6 +1,6 @@
 ![alt text](https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-Logo.png)
 
-    [![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/moondisco/SensorsEvolve&defaultDeviceType=raspberry-pi>)
+
 
 # EvolveSensors
 Sensors with an Adafruit M0, Raspberry Pi 4, Docker, BalenaOS, Grafana, NGINX, PHPMyAdmin, WiFi HotSpot, and Apache
@@ -16,6 +16,8 @@ The Pi creates it's own hotspot that Adafruit's Feather M0 WiFi sends data to th
 
 When the pi is being updated causing the Feather M0 to not beable to connect to the Pi, the M0 with enter a reset state.
 It will try to connect every 10-15sec, when it fails it will reset, until it has established a connection.
+
+[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/moondisco/SensorsEvolve&defaultDeviceType=raspberry-pi>)
 
 Things working:
     -Currently the Admin username and password are "Admin" and "EvolveAdmin".
