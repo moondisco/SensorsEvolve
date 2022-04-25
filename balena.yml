@@ -39,6 +39,4 @@ data:
     - RESIN_HOST_CONFIG_arm_64bit: 1
     - RESIN_HOST_CONFIG_avoid_warnings: 1
   defaultDeviceType: raspberrypi4-64
-  supportedDeviceTypes:
-    - raspberrypi4-64
 version: 1.0.0
