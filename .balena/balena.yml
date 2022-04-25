@@ -1,0 +1,10 @@
+build-variables:
+    services:
+        db:
+            - MYSQL_ROOT_PASSWORD=EvolveAdmin
+            - MYSQL_DATABASE=grafanadb            
+            - MYSQL_USER=grafana
+            - MYSQL_PASSWORD=Evolve
+        phpmyadmin:
+            - PMA_USER=admin
+            - PMA_PASSWORD=EvolveAdmin
