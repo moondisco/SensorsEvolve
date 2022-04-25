@@ -12,19 +12,9 @@ assets:
     type: blob.asset
     data:
       url: >-
-        https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-Logo.png	
+        https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-Logo.png
 data:
   defaultDeviceType: raspberry-pi
   supportedDeviceTypes:
     - raspberrypi4-64
 version: 1.0.0
-build-variables:
-    services:
-        db:
-            - MYSQL_ROOT_PASSWORD=EvolveAdmin
-            - MYSQL_DATABASE=grafanadb            
-            - MYSQL_USER=grafana
-            - MYSQL_PASSWORD=Evolve
-        phpmyadmin:
-            - PMA_USER=admin
-            - PMA_PASSWORD=EvolveAdmin
