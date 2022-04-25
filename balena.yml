@@ -30,8 +30,5 @@ data:
     - RESIN_HOST_CONFIG_avoid_warnings: 1
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
-    - raspberry-pi
-    - raspberry-pi2
-    - raspberrypi3
     - raspberrypi4-64
 version: 1.0.0
