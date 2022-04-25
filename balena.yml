@@ -17,7 +17,7 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/moondisco/SensorsEvolve'
+      url: 'https://github.com/moondisco/SensorsEvolve/tree/main/BalenaOS'
   logo:
     type: blob.asset
     data:
