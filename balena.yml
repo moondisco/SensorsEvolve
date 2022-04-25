@@ -15,7 +15,24 @@ assets:
       url: >-
         https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-Logo.png
 data:
+  applicationEnvironmentVariables:
+    - AP_PASSWORD: EvolveSensors
+    - AP_SSID: RPiHotSpot
+  applicationConfigVariables:
+    - RESIN_SUPERVISOR_POLL_INTERVAL: 900000
+    - BALENA_HOST_SPLASH_IMAGE: 'https://github.com/moondisco/SensorsEvolve/blob/main/EVOLVE-fleet.png'
+    - RESIN_HOST_CONFIG_dtparam: RESIN_HOST_CONFIG_dtparam
+    - RESIN_HOST_CONFIG_dtoverlay: "vc4-fkms-v3d"
+    - RESIN_HOST_CONFIG_gpu_mem: 16
+    - BALENA_HOST_CONFIG_hdmi_group: 0
+    - BALENA_HOST_CONFIG_hdmi_mode: 1
+    - BALENA_HOST_CONFIG_display_rotate: 0
+    - RESIN_HOST_CONFIG_arm_64bit: 1
+    - RESIN_HOST_CONFIG_avoid_warnings: 1
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
+    - raspberry-pi
+    - raspberry-pi2
+    - raspberrypi3
     - raspberrypi4-64
 version: 1.0.0
