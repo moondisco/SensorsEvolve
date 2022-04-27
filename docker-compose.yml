@@ -11,7 +11,7 @@ services:
     container_name: php
   db:
     build:
-      context: '. /BalenaOS/mysql/'
+      context: './BalenaOS/mysql/'
     restart: always
     ports:
       - "3306:3306"
@@ -29,7 +29,7 @@ services:
     container_name: phpmyadmin
   grafana:
     build:
-      context: '. /BalenaOS/grafana/'
+      context: './BalenaOS/grafana/'
     ports:
       - "3000:3000"
     depends_on:
@@ -40,7 +40,7 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana
   wifi-repeater:
-    build: '. /BalenaOS/wifi-repeater/'
+    build: './BalenaOS/wifi-repeater/'
     privileged: true
     labels:
       io.balena.features.dbus: '1'
