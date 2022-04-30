@@ -9,4 +9,3 @@ build-variables:
             - PMA_USER=admin
             - PMA_PASSWORD=EvolveAdmin
 	    
-
