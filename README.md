@@ -43,5 +43,5 @@ Setup for MySQL in Grafana is as follows:
  
  
 **Weird issue with Grafan**
-In order for the database to show you need to 'Sign In", followed by selecting "Configuration", "Data sources", opening up the MySQL database and then selecting save.
+In order for the database to show you need to 'Sign In", followed by selecting "Configuration", "Data sources", opening up the MySQL database called "main", enter the password and save.
 
