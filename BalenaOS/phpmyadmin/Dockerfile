@@ -1,0 +1,8 @@
+FROM arm64v8/phpmyadmin:latest
+
+ARG PMA_USER
+ARG PMA_PASSWORD
+
+ENV PMA_USER=admin
+ENV PMA_PASSWORD=EvolveAdmin
+

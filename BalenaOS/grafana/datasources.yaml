@@ -1,3 +1,5 @@
+apiVersion: 1
+
 datasources:
     - name: main
       type: mysql
@@ -6,5 +8,8 @@ datasources:
       password: Evolve
       user: grafana
       database: grafanadb
+      version: 1
       editable: true
       isDefault: true
+      jsonData:
+          timeInterval: '10s'
