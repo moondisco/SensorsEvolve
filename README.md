@@ -23,6 +23,7 @@ Things working:
     -Currently the Admin username and password are "Admin" and "EvolveAdmin".
 
     -PHPMyAdmin login is "root" and "EvolveAdmin"
+    -only works on local host IP, x.x.x.x:8080
 
     -MySQL login is "root" and "EvolveAdmin" with the sub user for grafana "grafana" and "Evolve" to access "grafanadb".
 
@@ -38,3 +39,9 @@ Setup for MySQL in Grafana is as follows:
 
     Min Time interval: 10s
     
+    
+ 
+ 
+**Weird issue with Grafan**
+In order for the database to show you need to 'Sign In", followed by selecting "Configuration", "Data sources", opening up the MySQL database and then selecting save.
+

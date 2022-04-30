@@ -19,8 +19,8 @@ services:
       - backend
     container_name: db
   phpmyadmin:
-    image: arm64v8/phpmyadmin:latest
-    restart: always
+    build:
+      context: './BalenaOS/phpmyadmin/'
     ports:
       - "8080:80"
     networks:
