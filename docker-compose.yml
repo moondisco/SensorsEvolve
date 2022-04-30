@@ -3,7 +3,7 @@ version: "2.0"
 services:
   php:
     build: 
-      context: './php/'
+      context: './BalenaOS/php/'
       args:
        PHP_VERSION: 5.6
     networks:
@@ -11,7 +11,7 @@ services:
     container_name: php
   db:
     build:
-      context: './mysql/'
+      context: './BalenaOS/mysql/'
     restart: always
     ports:
       - "3306:3306"
@@ -29,7 +29,7 @@ services:
     container_name: phpmyadmin
   grafana:
     build:
-      context: './grafana/'
+      context: './BalenaOS/grafana/'
     ports:
       - "3000:3000"
     depends_on:
@@ -40,7 +40,7 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana
   wifi-repeater:
-    build: './wifi-repeater/'
+    build: './BalenaOS/wifi-repeater/'
     privileged: true
     labels:
       io.balena.features.dbus: '1'
@@ -52,7 +52,7 @@ services:
       - frontend
       - backend
   nginx:
-    build : nginx
+    build : './BalenaOS/nginx/'
     depends_on:
       - grafana
       - db

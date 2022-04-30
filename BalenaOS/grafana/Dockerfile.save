@@ -1,0 +1,13 @@
+FROM grafana/grafana-oss:latest
+
+ARG GF_PATHS_CONFIG=/etc/grafana/grafana.ini
+ENV GF_PATHS_CONFIG=/etc/grafana/grafana.ini
+
+COPY grafana.ini /etc/grafana/grafana.ini
+COPY home.json /usr/share/grafana/public/dashboards/home.json
+
+
+GF_SECURITY_ADMIN_USER: admin_user ENV GF_DATABASE_TYPE=mysql ENV 
+GF_DATABASE_HOST=10.42.0.1:3306 ENV GF_DATABASE_NAME=grafanadb ENV 
+GF_DATABASE_USER=grafana ENV GF_DATABASE_PASSWORD=Evolve
+      GF_SECURITY_ADMIN_PASSWORD: admin_password
