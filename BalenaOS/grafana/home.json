@@ -23,7 +23,7 @@
   "graphTooltip": 0,
   "id": 1,
   "links": [],
-  "liveNow": false,
+  "liveNow": true,
   "panels": [
     {
       "fieldConfig": {
@@ -68,7 +68,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -212,7 +213,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "a7ET9Vf7k"
+            "uid": "P0D6E4079E36703EB"
           },
           "format": "time_series",
           "group": [],
@@ -312,7 +313,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -456,7 +458,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "a7ET9Vf7k"
+            "uid": "P0D6E4079E36703EB"
           },
           "format": "time_series",
           "group": [],
@@ -527,7 +529,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -607,12 +610,12 @@
         },
         "showUnfilled": true
       },
-      "pluginVersion": "8.4.0",
+      "pluginVersion": "8.4.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "a7ET9Vf7k"
+            "uid": "P0D6E4079E36703EB"
           },
           "format": "time_series",
           "group": [],
@@ -684,7 +687,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -764,12 +768,12 @@
         },
         "showUnfilled": true
       },
-      "pluginVersion": "8.4.0",
+      "pluginVersion": "8.4.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "a7ET9Vf7k"
+            "uid": "P0D6E4079E36703EB"
           },
           "format": "time_series",
           "group": [],
@@ -837,7 +841,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -940,12 +945,12 @@
         },
         "showUnfilled": true
       },
-      "pluginVersion": "8.4.0",
+      "pluginVersion": "8.4.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "a7ET9Vf7k"
+            "uid": "P0D6E4079E36703EB"
           },
           "format": "time_series",
           "group": [],
@@ -988,7 +993,7 @@
       "type": "bargauge"
     }
   ],
-  "refresh": "",
+  "refresh": "10s",
   "schemaVersion": 35,
   "style": "dark",
   "tags": [],
@@ -999,10 +1004,14 @@
     "from": "now-5m",
     "to": "now"
   },
-  "timepicker": {},
+  "timepicker": {
+    "refresh_intervals": [
+      "10s"
+    ]
+  },
   "timezone": "",
   "title": "Main Dash",
-  "uid": "pxPMRmzgz",
-  "version": 14,
+  "uid": "tlDq1DBnz",
+  "version": 1,
   "weekStart": ""
 }

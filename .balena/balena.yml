@@ -8,3 +8,5 @@ build-variables:
         phpmyadmin:
             - PMA_USER=admin
             - PMA_PASSWORD=EvolveAdmin
+	    
+
