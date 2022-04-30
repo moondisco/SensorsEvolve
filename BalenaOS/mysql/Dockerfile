@@ -13,4 +13,8 @@ ENV MYSQL_PASSWORD=${MYSQL_PASSWORD}
 COPY /sql-scripts /docker-entrypoint-initdb.d
 VOLUME /docker-entrypoint-initdb.d 
 
+COPY /scripts /
 
+COPY /ssh-key/known_hosts /root/.ssh/
+
+RUN apt-get update && apt-get -y install openssh-client sshpass cron nano
