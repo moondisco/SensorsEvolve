@@ -1,11 +1,11 @@
 name: SensorsEvolve
 type: sw.application
 description: >-
-  This project uses a Raspberry Pi 4 with BalenaOS, Docker, Grafana, NGINX, PHPMyAdmin, WiFi HotSpot, and Apache. 
+  This project uses a Raspberry Pi 4 with BalenaOS, Docker, Grafana, NGINX, PHPMyAdmin, WiFi HotSpot, and Apache.
   The Pi collects MySQL packets data via wifi, sent from an Adafruit Feather M0+ WiFi.
 post-provisioning: >-
   ## How it Works##
-  
+
   Sensors feed an Adafruit M0 which then sends data to your Raspberry Pi 4 running Docker, BalenaOS, Grafana, NGINX, PHPMyAdmin, WiFi HotSpot, and Apache.
   The Feather M0 WiFi is using AM2315 Sensors with a TCA9518A. These can be changed for other sensors inside Platformio.
   The code is written for a AdaFruit M0 WiFi Microcontroller and a Raspberry Pi 4/400/Zero WH 2.
@@ -35,7 +35,6 @@ data:
     - BALENA_HOST_CONFIG_hdmi_force_hotplug: 1
     - BALENA_HOST_CONFIG_hdmi_group: 0
     - BALENA_HOST_CONFIG_hdmi_mode: 1
-    - BALENA_HOST_CONFIG_display_rotate: 0
     - BALENA_HOST_SPLASH_IMAGE: 'https://raw.githubusercontent.com/moondisco/SensorsEvolve/main/EVOLVE-Boot.png'
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
